@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const inversify_1 = require("inversify");
+const types_1 = require("../types/types");
+const userService_1 = require("../services/userService");
+const responseHelpers_1 = require("../helpers/responseHelpers");
+const container = new inversify_1.Container();
+container.bind(types_1.TYPES.UserService).to(userService_1.UserService);
+container.bind(types_1.TYPES.ResponseHelper).to(responseHelpers_1.ResponseHelper).inSingletonScope();
+exports.default = container;

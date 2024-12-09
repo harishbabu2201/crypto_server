@@ -1,0 +1,44 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc",
+    "prod": "pm2 start ecosystem.config.js --env production",
+    "dev": "pm2 start ecosystem.config.js --env development",
+    "start":"nodemon dist/server.js tsx watch src/server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/crypto-js": "^4.2.2",
+    "@types/jsonwebtoken": "^9.0.7",
+    "bcryptjs": "^2.4.3",
+    "crypto-ts": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "graphql-tools": "^9.0.1",
+    "merge-graphql-schemas": "^1.7.8",
+    "mongoose": "^8.7.1"
+  },
+  "devDependencies": {
+    "@types/inversify": "^2.0.32",
+    "@types/node": "^22.7.5",
+    "apollo-server": "^3.13.0",
+    "apollo-server-express": "^3.13.0",
+    "crypto-js": "^4.2.0",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.9.0",
+    "inversify": "^6.0.2",
+    "jsonwebtoken": "^9.0.2",
+    "nodemon": "^3.1.7",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.6.3"
+  }
+}
